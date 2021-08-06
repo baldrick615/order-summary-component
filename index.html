@@ -1,37 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Order summary card</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
-  Order Summary
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+      body {
+        background-image: url('images/pattern-background-desktop.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: hsl(225, 100%, 98%);
 
-  Annual Plan
-  $59.99/year
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-  Change
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .card {
+        font-family: 'Red Hat Display', sans-serif;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 150px;
+        border-radius: 20px 20px;
+      }
 
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .card-img-top {
+        border-radius: 20px 20px 0 0;
+      }
+
+      .plan-text {
+        font-weight: 700;
+        justify-content: center;
+        padding-left: 8px;
+      }
+
+      .card-footer {
+        border: none;
+        background-color: white;
+      }
+      .card-footer-text {
+        color: #000;
+        font-size: 0.8rem;
+      }
+
+      .btn-payment {
+        background-color: hsl(223, 47%, 23%);
+        color: #fff;
+        border-radius: 15px;
+        height: 40px;
+        cursor: pointer;
+      }
+
+      .btn-payment:hover {
+        color: hsl(223, 47%, 23%);
+        background-color: hsl(225, 100%, 98%);
+      }
+
+      h5 {
+        font-weight: 900;
+      }
+
+      .card-rates {
+        justify-content: center;
+        align-content: center;
+        padding: 0 10px;
+      }
+      .card-rates .pricing {
+        font-weight: 300;
+        font-size: 14px;
+        opacity: 0.8;
+        margin-top: -15px;
+        margin-left: 0;
+      }
+
+      .card-rates a {
+        text-decoration: underline;
+        margin-left: -20px;
+        font-weight: 700;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" style="width: 18rem">
+      <img src="images/illustration-hero.svg" class="card-img-top" alt="..." />
+      <div class="card-body text-center">
+        <h5 class="card-title text-center">Order Summary</h5>
+        <p class="card-text">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <div class="card-rates bg-light mb-4">
+          <div class="row py-3">
+            <div class="col-md-2">
+              <img src="/images/icon-music.svg" alt="" />
+            </div>
+            <div class="col-md-6">
+              <p class="plan-text">Annual Plan</p>
+              <p class="pricing">$59.99/year</p>
+            </div>
+            <div class="col-md-4"><a href="#">Change</a></div>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-payment btn-block shadow"
+          >Proceed to Payment</a
+        >
+      </div>
+      <div class="card-footer text-center">
+        <a href="#" class="card-footer-text">Cancel Order</a>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Timothy McGrath</a>.
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
